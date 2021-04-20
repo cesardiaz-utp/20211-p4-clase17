@@ -22,11 +22,10 @@ public class DemoAbstractFactory {
         String osName = System.getProperty("os.name").toLowerCase();
         if (osName.contains("mac")) {
             factory = new MacOSFactory();
-            app = new Application(factory);
         } else {
             factory = new WindowsFactory();
-            app = new Application(factory);
         }
+        app = new Application(factory);
         return app;
     }
 

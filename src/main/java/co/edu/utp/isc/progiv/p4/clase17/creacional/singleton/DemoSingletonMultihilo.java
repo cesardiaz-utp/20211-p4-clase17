@@ -16,12 +16,12 @@ public class DemoSingletonMultihilo {
     public static void main(String[] args) {
 
         var threadFoo = new Thread(() -> {
-            Singleton singleton = Singleton.getInstance("FOO");
+            var singleton = Singleton.getInstance("FOO");
             System.out.println(singleton.getValue());
         });
         
         var threadBar = new Thread(() -> {
-            Singleton singleton = Singleton.getInstance("BAR");
+            var singleton = Singleton.getInstance("BAR");
             System.out.println(singleton.getValue());
         });
 
